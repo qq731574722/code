@@ -1,0 +1,35 @@
+{ 
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) WSL",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/mnt/c/code/json/xtest",
+            "args": [],
+            "stopAtEntry": false,
+            "miDebuggerArgs": "",
+            "cwd": "/mnt/c/code/json/",
+            "environment": [],
+            "externalConsole": false,
+            "sourceFileMap": {
+                "/mnt/c/": "C:\\"
+            },
+            "pipeTransport": {
+                "debuggerPath": "/usr/bin/gdb",
+                "pipeProgram": "${env:windir}\\system32\\bash.exe",
+                "pipeArgs": [
+                    "-c"
+                ],
+                "pipeCwd": ""
+            },
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+    ]
+}

@@ -1,0 +1,3 @@
+/opt/etc
+/home
+/proc/fb

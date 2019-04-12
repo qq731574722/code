@@ -1,0 +1,19 @@
+house:
+  family:
+    name: Doe
+    parents:
+      - John
+      - Jane
+        - Pual
+        - Mark
+        - Simone
+    children:
+      - Pual
+      - Mark
+      - Simone
+  address:
+    number: 34
+    street: Main Street
+    city: Nowheretow
+    zipcode: 12345
+    reality: true
