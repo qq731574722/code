@@ -9,7 +9,7 @@ g_list = []
 b_list = []
 color_list = []
 # 读取图片，保存RGB至list中
-im = Image.open(r'image\a.jpg')
+im = Image.open(r'..\image\c.jpg')
 pix = im.load()
 width = im.size[0]
 height = im.size[1]
@@ -33,5 +33,5 @@ ax.set_xlabel('Red')
 
 plt.draw()
 plt.pause(2)
-plt.savefig('3D View/3D.jpg')
+plt.savefig('../3D View/3D2.jpg')
 plt.close()
