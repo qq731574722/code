@@ -3,18 +3,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from PIL import Image
-import cv2
 
 r_list = []
 g_list = []
 b_list = []
 color_list = []
 # 读取图片，保存RGB至list中
-im = Image.open(r'assest\c.jpg')
+im = Image.open(r'image\a.jpg')
 pix = im.load()
 width = im.size[0]
 height = im.size[1]
-print(pix[0, 0])
+# print(pix[0, 0])
 ax = plt.subplot(projection='3d')  # 创建一个三维的绘图工程
 plt.title("RGB Value Disply") 
 for x in range(width):
@@ -33,6 +32,6 @@ ax.set_ylabel('Green')
 ax.set_xlabel('Red')
 
 plt.draw()
-plt.pause(10000)
+plt.pause(2)
 plt.savefig('3D View/3D.jpg')
 plt.close()
