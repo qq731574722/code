@@ -46,7 +46,7 @@ for i in centroids:
     color_list.append(i/256)
 '''
 color_list = []
-for center in centroids:
+for center in centroids:        #将簇标记为质心的颜色
     color = []
     for i in center:
         color.append(i/255)
