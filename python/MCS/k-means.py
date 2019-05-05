@@ -1,18 +1,27 @@
 # -*- coding: utf-8 -*-
+import math
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 from mpl_toolkits.mplot3d import Axes3D
 from sklearn.cluster import KMeans
 
-#data = np.random.rand(100, 3)
+def sample(length):
+    res = []
+    interval = math.ceil(length/50)
+    val = 0
+    while val<=length:
+        res.append(val)
+        val+=interval
+    return res
+
 data = []
-im = Image.open(r'..\image\c.jpg')
+im = Image.open(r'image\e.jpg')
 pix = im.load()
 width = im.size[0]
 height = im.size[1]
-for x in range(width):
-    for y in range(height):
+for x in sample(width):
+    for y in sample(height):
         r, g, b = pix[x, y]
         data.append([r, g, b])
 
@@ -36,7 +45,14 @@ color_list = []
 for i in centroids:
     color_list.append(i/256)
 '''
-color_list=['r','y','g','b']
+color_list = []
+for center in centroids:
+    color = []
+    for i in center:
+        color.append(i/255)
+    color_list.append(color)
+
+#color_list=['r','y','g','b']
 
 points = []
 for i in label_pred:
@@ -51,6 +67,6 @@ ax.set_zlabel('Blue')  # 坐标轴
 ax.set_ylabel('Green')
 ax.set_xlabel('Red')
 plt.draw()
-plt.pause(2)
+plt.pause(100)
 plt.savefig('../3D View/K-means2.jpg')
 plt.close()

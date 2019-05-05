@@ -1,23 +1,34 @@
 # -*- coding: utf-8 -*-
+import math
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from PIL import Image
+
+
+def sample(length):
+    res = []
+    interval = math.ceil(length/50)
+    val = 0
+    while val<=length:
+        res.append(val)
+        val+=interval
+    return res
 
 r_list = []
 g_list = []
 b_list = []
 color_list = []
 # 读取图片，保存RGB至list中
-im = Image.open(r'..\image\c.jpg')
+im = Image.open(r'image\e.jpg')
 pix = im.load()
 width = im.size[0]
 height = im.size[1]
 # print(pix[0, 0])
 ax = plt.subplot(projection='3d')  # 创建一个三维的绘图工程
-plt.title("RGB Value Disply") 
-for x in range(width):
-    for y in range(height):
+plt.title("RGB Value Disply")
+for x in sample(width):
+    for y in sample(height):
         r, g, b = pix[x, y]
         r_list.append(r)
         g_list.append(g)
@@ -32,6 +43,6 @@ ax.set_ylabel('Green')
 ax.set_xlabel('Red')
 
 plt.draw()
-plt.pause(2)
+plt.pause(1000)
 plt.savefig('../3D View/3D2.jpg')
 plt.close()
