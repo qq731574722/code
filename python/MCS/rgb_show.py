@@ -37,10 +37,10 @@ for x in sample(width):
         color_list.append(color)
 
 
-ax.scatter(r_list, g_list, b_list, c=color_list)  # 绘制数据点,颜色是红色
-ax.set_zlabel('Blue')  # 坐标轴
-ax.set_ylabel('Green')
-ax.set_xlabel('Red')
+ax.scatter(b_list, r_list, g_list, c=color_list)  # 绘制数据点,颜色是红色
+ax.set_zlabel('Green')  # 坐标轴
+ax.set_ylabel('Red')
+ax.set_xlabel('Blue')
 
 plt.draw()
 plt.pause(1000)

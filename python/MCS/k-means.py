@@ -52,20 +52,20 @@ for center in centroids:        #将簇标记为质心的颜色
         color.append(i/255)
     color_list.append(color)
 
-#color_list=['r','y','g','b']
+color_list=['r','y','g','b']
 
 points = []
 for i in label_pred:
     points.append(color_list[i])
-ax.scatter(data[:, 0], data[:, 1], data[:, 2], c=points, alpha=0.1)
-ax.scatter(centroids[:, 0], centroids[:, 1], centroids[:, 2],
+ax.scatter(data[:, 2], data[:, 0], data[:, 1], c=points, alpha=0.1)
+ax.scatter(centroids[:, 2], centroids[:, 0], centroids[:, 1],
            marker='s', c=color_list, s=100, alpha=1)
 
 
 #ax.scatter(data[:, 0], data[:, 1], data[:, 2])
-ax.set_zlabel('Blue')  # 坐标轴
-ax.set_ylabel('Green')
-ax.set_xlabel('Red')
+ax.set_zlabel('Green')  # 坐标轴
+ax.set_ylabel('Red')
+ax.set_xlabel('Blue')
 plt.draw()
 plt.pause(100)
 plt.savefig('../3D View/K-means2.jpg')
