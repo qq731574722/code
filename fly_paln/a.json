@@ -1,0 +1,19 @@
+{
+    "employees": [
+        {
+            "jobNumber": "100000",
+            "user": "bill123",
+            "pwd": "123456"
+        },
+        {
+            "jobNumber": "100001",
+            "user": "george123",
+            "pwd": "123456"
+        },
+        {
+            "jobNumber": "100002",
+            "user": "thomas123",
+            "pwd": "123456"
+        }
+    ]
+}

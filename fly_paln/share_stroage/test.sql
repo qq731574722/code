@@ -1,0 +1,2 @@
+-- SQLite
+UPDATE employees SET ID=1 and SALARY=1000 WHERE ID=1

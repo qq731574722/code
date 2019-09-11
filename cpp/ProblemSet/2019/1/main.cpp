@@ -14,8 +14,8 @@ vector<int> ans;
 int main(int argc, char const *argv[])
 {
     int N;
-    //freopen("data/7.in", "r", stdin);
-    //freopen("data/7.out", "w", stdout);
+    freopen("data/7.in", "r", stdin);
+    freopen("data/7.out", "w", stdout);
     scanf("%d", &N);
     for (size_t i = 1; i <= N; i++)
         scanf("%d", a + i);
